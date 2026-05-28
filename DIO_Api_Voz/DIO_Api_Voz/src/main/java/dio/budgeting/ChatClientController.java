@@ -8,12 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api")
 public class ChatClientController{
-
     private final ChatClient chatClient;
     public ChatClientController(ChatClient chatClient) {
         this.chatClient = chatClient;
     }
-
     @GetMapping("/chat")
     String chat(String prompt){
         return this.chatClient.prompt().user(prompt).call().content();
