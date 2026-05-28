@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class PersistTransactionUseCase {
     private final TransactionRepository transactionRepository;
-
     public PersistTransactionUseCase(TransactionRepository transactionRepository) {
         this.transactionRepository = transactionRepository;
     }
